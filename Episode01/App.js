@@ -1,4 +1,4 @@
-// ReactElement is Object which convert letter in HTML 
+// ReactElement is Object which convert letter in HTML  
 
 /* 
 <div id="parent">
