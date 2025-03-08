@@ -1,0 +1,34 @@
+React makes our app fast in some extent but there are other packages which are used to make our application fast.
+NPM (Package Manager) => NPM manages lots of packages but it does not stands for node package manager. For Example : Like google === internet
+package.json => It is configuration for NPM.
+Bundler => Bundler is bundle/packages our application so it can be shift to production properly. It will gives our app muscel (Without it App is just skelotone) For Example : webpack,vite,parcel  
+Dependecies : 
+    1. Dev-dependencies = Dependecies which are used while developing phase.
+    2. Normal dependencies = Dependecies which are also used while production phase.
+
+package.json : It track of all the dependencies and version of it's and application.
+package-lock.json : It track of initial version of all thr dependencies. (lock the version of dependencies)
+
+Transitive Dependecies (node_modules) : Our app => parcel => some dependencies => some dependencies ....
+Every dependencies have their own package.json
+
+No need to push node_modules on to the git and production , because with the help of package.json and package-lock.json we can re-create node_modules using command -- `npm install`
+
+parcel : 
+    - Dev Build
+    - Local Server
+    - HMR = Hot Module Replacement
+    - File Watching Algorithm - written in C++
+    - Caching - Faster Builds
+    - Image Optimization
+    - Minification
+    - Bundling
+    - Compress
+    - Consistent Hashing
+    - Code Splitting
+    - Differential Bundling - Support older browsers
+    - Diagnostic
+    - Error Handling
+    - HTTPs
+    - Tree Shaking - removed unused code 
+    - Different dev and production bundle
