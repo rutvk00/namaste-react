@@ -1,15 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; 
 
-// ReactElement is Object which convert letter in HTML  
-
-/* 
-<div id="parent">
-    <div id="child">
-        <h1>Nested H1 Tag!</h1>
-    </div>
-</div> 
-*/
 
 const parent = React.createElement("div" , {id : "parent"} ,
     [

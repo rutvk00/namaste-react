@@ -1,0 +1,5 @@
+npm run start === npx parcel index.html 
+npm run build === npx parcel build index.html
+Because we set script inside package.json
+
+root.render() ==> Replace the content of root element with whatever we pass inside render function.
