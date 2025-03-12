@@ -1,0 +1,35 @@
+{
+  "name": "episode03",
+  "version": "1.0.0",
+  "description": "Namaste React Episode 02",
+  "main": "App.js",
+  "scripts": {
+    "start" : "parcel index.html",
+    "build" : "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rutvk00/namaste-react.git"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "Rutvik Prajapati",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rutvk00/namaste-react/issues"
+  },
+  "homepage": "https://github.com/rutvk00/namaste-react#readme",
+  "dependencies": {
+    "parcel": "^2.13.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  },
+  "browserslist" : [
+    "last 2 versions"
+  ]
+}
