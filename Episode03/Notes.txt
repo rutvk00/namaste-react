@@ -2,4 +2,24 @@ npm run start === npx parcel index.html
 npm run build === npx parcel build index.html
 Because we set script inside package.json
 
+Library - lite weight , we can use it for part of application , not compulsory to create application using this. (React)
+Framework - heavy weight package ,  we have to create application using the framework's rules and regulation. we have to use framework's standard for developing application. (Next Js)
+
+
 root.render() ==> Replace the content of root element with whatever we pass inside render function.
+
+const heading = React.createElement("h1" , {id : "heading"} , "Hello World From React!");
+
+This is the complex way to create html element in react that's why facebook developers creates JSX.
+JSX is not part of react.
+
+JSX is convetion where html and Js merge together in file to creat html using DOM manipulation.
+JSX is not html in Javascript.
+
+JSX is html like syntax or XML like syntax
+
+Browser can not understand JSX , parcel have babel package whose job is to transpile JSX in React code so later it will be converted into JS so browser can understand.
+
+React.createElement => ReactElement - JS Object => HTMLElement(Render on Browser)
+JSX => React.createElement => ReactElement - JS Object => HTMLElement(Render on Browser)
+Babel does lot more things - It can transpile ES6 to lower version of ecmascript which browser can understand. 

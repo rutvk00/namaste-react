@@ -14,8 +14,8 @@ const parent = React.createElement("div" , {id : "parent"} ,
             ])
     ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(parent);
 
 
 
@@ -31,3 +31,15 @@ root.render(parent);
  Framework - heavy weight package ,  we have to create application using the framework's rules and regulation. we have to use framework's standard for developing application. (Next Js)
 
 */
+
+//JSX - HTML like syntax or XML like syntax
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const jsxHeading = (
+    <h1 className='head' id="heading">
+        Namaste React using JSX !!
+    </h1>
+);
+root.render(jsxHeading)
+console.log("jsxHeading : " , jsxHeading)
