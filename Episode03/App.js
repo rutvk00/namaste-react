@@ -36,10 +36,31 @@ const parent = React.createElement("div" , {id : "parent"} ,
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const jsxHeading = (
+const jsxHeading =  (
     <h1 className='head' id="heading">
         Namaste React using JSX !!
     </h1>
 );
-root.render(jsxHeading)
-console.log("jsxHeading : " , jsxHeading)
+
+const Title = () => (
+    <h1 className='head' tabIndex="5">Namaste React Title</h1>
+)
+
+// React Functional Components
+const HeadingComponent = () => {
+    return <h1>Namaste React Fucntional Component</h1>
+}
+
+// Cpmponents Compositions
+const HeadingComponent2 = () => (
+    <div id='container'>
+        {Title()}                  
+        <Title></Title>            
+        <Title/>                   
+        <h1 id='heading'>Namaste React Fucntional Component</h1>
+    </div>
+)
+
+root.render(<HeadingComponent2/>);
+// root.render(jsxHeading)
+// console.log("jsxHeading : " , jsxHeading)

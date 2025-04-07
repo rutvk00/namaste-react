@@ -23,3 +23,9 @@ Browser can not understand JSX , parcel have babel package whose job is to trans
 React.createElement => ReactElement - JS Object => HTMLElement(Render on Browser)
 JSX => React.createElement => ReactElement - JS Object => HTMLElement(Render on Browser)
 Babel does lot more things - It can transpile ES6 to lower version of ecmascript which browser can understand. 
+
+Components : 
+    1. Class Based Components (Old)
+    2. Functional Based Components (New)
+
+JSX sanitized data which are goint to execute by browsers.
