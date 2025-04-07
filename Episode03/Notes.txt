@@ -24,7 +24,7 @@ React.createElement => ReactElement - JS Object => HTMLElement(Render on Browser
 JSX => React.createElement => ReactElement - JS Object => HTMLElement(Render on Browser)
 Babel does lot more things - It can transpile ES6 to lower version of ecmascript which browser can understand. 
 
-Components : 
+Components : A simple javascript function which return piece of JSX
     1. Class Based Components (Old)
     2. Functional Based Components (New)
 
