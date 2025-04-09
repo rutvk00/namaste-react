@@ -1,0 +1,7 @@
+Props(Properties) :  React Components are simple Javascript function which return some piece of JSX. Props are arguments of this functions. Through Props we can pass data to the components.
+
+Props is object which passed inside the components.
+
+Config Driven UI : Website driven by data(Config).
+
+Key in components (While looping components) : Because key can differentiate all the same level components , so react can efficiently differentiate change in these components.
