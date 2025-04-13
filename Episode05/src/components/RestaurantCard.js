@@ -15,7 +15,7 @@ const RestaurantCard = (props) => {
             />
             <h3>{resName}</h3>
             <h4>{cuisines}</h4>
-            <h4>{avgRating}</h4>
+            <h4>{avgRating} stars</h4>
             <h4>{deliveryTime}</h4>
         </div>
     )

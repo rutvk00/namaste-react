@@ -1,9 +1,0 @@
-Two Types of Export/Import :
-    - Default Export/Import :
-        - export default variable_name;
-        - import variable_name from 'Path of variable_name from where is exported';
-
-    - Named Export/Default :
-        - export const variable_name;
-        - import {variable_name} from 'Path of variable_name from where is exported';
-
