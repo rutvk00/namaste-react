@@ -1,0 +1,11 @@
+Monolith Architecture : 
+    - All the functionality of large scale application at one place. It is very hard to change/update one of the functionality because all are at one place.
+    - All the functionality at one place so any upadate happens then all application compile/build and deploy again.
+
+
+Microservices Architecture :
+    - All the functionality of large scale application are independent services. They talk togather depending on usecases and requirements.
+    - All the functionality are independent services then any update in one of them then only that service compile/build and deploy not all of the
+
+
+CORS Policy : Our Browser block us to call api of another origin from our localhost origin.
