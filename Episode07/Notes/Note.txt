@@ -28,3 +28,5 @@
         ]);
     
     - Provide this configuration to routerProvider for render it.
+
+- useRouterError() : Using this hook we can get more information about error, so we can show it in efficient way to the user. 
