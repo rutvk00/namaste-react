@@ -10,7 +10,9 @@ Microservices Architecture :
 
 CORS Policy : Our Browser block us to call api of another origin from our localhost origin.
 
- const [btnName, setBtnName] = useState("Login") :
+const [btnName, setBtnName] = useState("Login") :
     - Why this const variable btnName change using setBtnName()
     - setBtnName() function call the component again with updated value as default value.
     - So that this btnName is new variable with updated value, we are not changing value of const variable, we are creating new variable.
+
+- Whenever state variable changes then react start it's reconsiliation cycle. Means re-render that component and update only that part where there is difference.
