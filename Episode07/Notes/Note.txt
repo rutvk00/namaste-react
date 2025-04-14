@@ -30,3 +30,15 @@
     - Provide this configuration to routerProvider for render it.
 
 - useRouterError()  : Using this hook we can get more information about error, so we can show it in efficient way to the user. It is provided by react-router-dom.
+
+- Children : Children contain array of object which contain path and specific component which are goint to be render on specific path.
+
+- Outlet component which is given by react-router-dom which automatically check the path and render specific component.
+
+- Link component provided by react-router-dom which is replacement of anchor tag. anchor tag can reload whole page , but Link can load only given component rather than whole page.
+
+- That's why it is known as single page application.
+
+- Types of Routing :
+    - Server side routing : Whenever we clicked on About Us then it reload the whole page and makes server request and got html of About us page from server , and render it.
+    - Client side routing : Whenever we load the web app first time then all the html code present at client side and when we navigate to About Us then it just load the About Us component without any server request.
