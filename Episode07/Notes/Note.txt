@@ -1,1 +1,30 @@
-useEffect Hook : Every time component render this useEffect called it's callback function.
+- useEffect Hook : 
+    - useEffect(callback, Dependecy array)
+    - callback is mandatory,Dependecy array is optional.
+    - If no dependecy array then Every time component render this useEffect called it's callback function.
+    - If dependecy array is empty like => [] then useEffect called on initial render(Just once).
+    - Dependecy array change behaviour of useEffect hook.
+    - Dependecy array have something inside it then useEffect called on update of that element of dependecy array. Ex. : [btnButton] => only called when btnButton change
+
+- Good Practices : 
+    - Never declare useState hook outside component.
+    - Declare all useState hook top of the component.
+    - Never declare useState hook inside if-else or inside function.
+
+- Routing : 
+    - npm Package : npm install react-router-dom (React Router Dom)
+    - import createBrowserRouter from react-router-dom
+    - create appRouter with configuration.
+    - Ex: 
+        const appRouter = createBrowserRouter([
+            {
+                path: "/",
+                element: <AppLayout />
+            },
+            {
+                path: "/about",
+                element: <About />
+            }
+        ]);
+    
+    - Provide this configuration to routerProvider for render it.

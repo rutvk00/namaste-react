@@ -2,10 +2,9 @@
   "name": "episode03",
   "version": "1.0.0",
   "description": "Namaste React Episode 02",
-  "main": "App.js",
   "scripts": {
-    "start" : "parcel index.html",
-    "build" : "parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -24,12 +23,14 @@
   "dependencies": {
     "parcel": "^2.13.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router": "^6.30.0",
+    "react-router-dom": "^6.30.0"
   },
   "devDependencies": {
     "process": "^0.11.10"
   },
-  "browserslist" : [
+  "browserslist": [
     "last 2 versions"
   ]
 }
