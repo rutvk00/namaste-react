@@ -8,7 +8,7 @@ Microservices Architecture :
     - All the functionality are independent services then any update in one of them then only that service compile/build and deploy not all of the
 
 
-CORS Policy : Our Browser block us to call api of another origin from our localhost origin.
+CORS Policy : Our Browser block us to call api of another origin from our localhost origin(Domain btnName).
 
 const [btnName, setBtnName] = useState("Login") :
     - Why this const variable btnName change using setBtnName()
