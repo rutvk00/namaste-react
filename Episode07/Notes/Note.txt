@@ -42,3 +42,5 @@
 - Types of Routing :
     - Server side routing : Whenever we clicked on About Us then it reload the whole page and makes server request and got html of About us page from server , and render it.
     - Client side routing : Whenever we load the web app first time then all the html code present at client side and when we navigate to About Us then it just load the About Us component without any server request.
+
+- <Link> It is special type of anchor tag which is provided by react-router-dom. 
