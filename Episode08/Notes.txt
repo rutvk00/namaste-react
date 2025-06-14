@@ -1,0 +1,4 @@
+- Class based component : It is just Javascript components which hae render function which return some piece of JSX.
+- All the props pass in constructor.
+- All state variables are created inside constructor.
+- Whenever class based component mount on page then first of all instance of that class is created using constructor and then call render function.
