@@ -6,11 +6,10 @@ class About extends React.Component {
 
     constructor(props){
         super(props);
-        console.log("Parent Constructor");
     }
     
     componentDidMount(){
-        console.log("Parent ComponentDidMount");
+        
     }
 
     render(){
@@ -18,10 +17,7 @@ class About extends React.Component {
             <div>
                 <h1>About</h1>
                 <h2>This is About section of Food Delivery App.</h2>
-                {/* <User name={"Rutvik Prajapati | function"}/> */}
                 <UserClass name={"Rutvik Prajapati 1| Class "} />
-                <UserClass name={"Rutvik Prajapati 2| Class "} />
-                <UserClass name={"Rutvik Prajapati 3| Class "} />
             </div>
         )
     }
