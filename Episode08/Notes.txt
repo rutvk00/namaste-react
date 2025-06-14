@@ -2,3 +2,41 @@
 - All the props pass in constructor.
 - All state variables are created inside constructor.
 - Whenever class based component mount on page then first of all instance of that class is created using constructor and then call render function.
+
+- In functional component Life Cycle : Load =>  Render => API Call => Fill Data.
+    - API Call made in use Effect hook.
+
+- In Class based componet Life Cycle : Constructor => Render Function => ComponentDidMount. (Similar to functional components Life Cycle Logic)
+- API Call made in ComponentDidMount function.
+
+- If two child components are there in parent components then life cycle :
+    - Parent Component 
+        - Child-1
+        - Child-2
+
+    - LifeCycle : Parent constructor => Parent Render => Child-1 constructor => Child-1 Render => Child-2 constructor => Child-2 Render => Child-1 ComponentDidMount => Child-2 ComponentDidMount => Parent ComponentDidMount
+
+    - Ans :
+        - Parent constructor
+        - Parent Render
+
+        - Child-1 Constructor
+        - Child-1 Render
+
+        - Child-2 Constructor
+        - Child-2 Render
+
+        - ** DOM UPDATE FOR BOTH CHILDREN - IN SINGLE BATCH **
+        - Child-1 ComponentDidMount
+        - Child-2 ComponentDidMount
+
+        - Parent ComponentDidMount
+
+    - Reason : Make API Call at the end for optimizations.
+
+- Basic LifeCycle : Constructor => Render => Update DOM => ComponentDidMount
+- React Life Cycle Diagram : https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+
+- Why React is fast?
+    - React is batch render process of all child components then batch commiting process  after compliting render process it manupulating DOM according to all render process difference and batch all API Calls.
