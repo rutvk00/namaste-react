@@ -1,0 +1,3 @@
+- Optimizing app using bundling app in smaller chunks.
+- Chunking / Code Splitting / Dynamic Bundling / Lazy Loading / On Demand Loading : Breakdown app in smaller logical chunks.
+- 
