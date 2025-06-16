@@ -3,26 +3,32 @@ import UserClass from "./UserClass";
 import React from "react";
 
 class About extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-    constructor(props){
-        super(props);
-    }
-    
-    componentDidMount(){
-        
-    }
+  componentDidMount() {
+    // Side-effects or API calls can go here
+  }
 
-    render(){
-        return (
-            <div>
-                <h1>About</h1>
-                <h2>This is About section of Food Delivery App.</h2>
-                <User name={"Rutvik"}/>
-                <UserClass name={"Rutvik Prajapati 1| Class "} />
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div className="px-6 py-8 max-w-4xl mx-auto">
+        <h1 className="text-3xl font-bold text-gray-800 mb-2">About</h1>
+        <h2 className="text-lg text-gray-600 mb-6">
+          This is the About section of the Food Delivery App.
+        </h2>
+
+        <div className="mb-6">
+          <User name={"Rutvik"} />
+        </div>
+
+        <div className="mb-6">
+          <UserClass name={"Rutvik Prajapati 1 | Class"} />
+        </div>
+      </div>
+    );
+  }
 }
-
 
 export default About;
