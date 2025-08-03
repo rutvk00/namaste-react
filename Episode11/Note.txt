@@ -1,1 +1,47 @@
 - Higher Order Component :  It takes Component input and return Component as output.  
+
+Controlled Components:
+- Definition: Form inputs whose values are controlled by React state.
+- Data Flow: UI → React state → UI (via value prop).
+- Example:
+  const [name, setName] = useState("");
+  <input value={name} onChange={e => setName(e.target.value)} />
+- Pros: Predictable state, easy validation.
+- Cons: More boilerplate, re-render on every change.
+
+Uncontrolled Components:
+- Definition: Form inputs that store their own state internally in the DOM.
+- Access: Use ref to read values.
+- Example:
+  const inputRef = useRef();
+  <input ref={inputRef} />
+  console.log(inputRef.current.value);
+- Pros: Less code, good for non-React libraries.
+- Cons: Harder to sync with app state.
+
+Props Lifting (Lifting State Up):
+- Definition: Moving state to a common parent so multiple components can share it.
+- Purpose: Avoid duplicate state & ensure data consistency.
+- Example:
+  ChildA ↔ Parent (state) ↔ ChildB
+- Flow: State is in parent → passed as props → changes trigger parent updates.
+
+Props Drilling:
+- Definition: Passing props through multiple layers of components that don’t use them directly.
+- Problem: Intermediate components just forward props → code harder to maintain.
+- Example:
+  App → A → B → C (needs prop)
+
+Context API:
+- Definition: Built-in React feature for avoiding props drilling.
+- How: Provides global-like state to deeply nested components without manual prop passing.
+- Example:
+  const UserContext = createContext();
+  
+  <UserContext.Provider value={user}>
+    <Component />
+  </UserContext.Provider>
+  
+  const value = useContext(UserContext);
+- Pros: No props drilling, cleaner code.
+- Cons: Can cause re-render performance issues if overused; debugging harder.
