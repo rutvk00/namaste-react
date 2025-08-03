@@ -1,11 +1,23 @@
+import { useDispatch } from "react-redux";
 import { CDN_URL } from "../utils/constants";
+import { addItem } from "../utils/cartSlice";
 
 const formatPrice = (p) => {
   if (p == null) return "N/A";
   return `₹${(p / 100).toFixed(2)}`;
 };
 
+
+
 const ItemList = ({ items }) => {
+
+  const dispatch = useDispatch();
+
+   const handleAddItem = (item) => {
+      dispatch(addItem(item))
+    }
+
+
   return (
     <div className="space-y-6">
       {items.map((item) => {
@@ -78,7 +90,7 @@ const ItemList = ({ items }) => {
             <div className="flex items-center space-x-4 mt-2 sm:mt-0">
               <button
                 className="px-4 py-2 bg-blue-600 text-white rounded-md text-sm font-medium hover:bg-blue-700 transition"
-                aria-label={`Add ${name} to cart`}
+                aria-label={`Add ${name} to cart`} onClick= { () => handleAddItem(item)}
               >
                 Add
               </button>

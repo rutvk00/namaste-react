@@ -4,12 +4,20 @@ import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContex from "../utils/UserContex";
 
+import {useSelector} from "react-redux";
+
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
+
   const onlineStatus = useOnlineStatus();
 
   const {loggedInUser} = useContext(UserContex);
+
+  const  cartItems = useSelector((store) => store.cart.items);
+  console.log("cargItems : " , cartItems);
+
   return (
+
     <header className="flex justify-between items-center px-6 py-4 shadow-md bg-white sticky top-0 z-50">
       <div className="logo-container">
         <img className="w-36" src={LOGO_URL} alt="Logo" />
@@ -57,7 +65,7 @@ const Header = () => {
               to="/cart"
               className="hover:text-blue-600 transition-colors duration-200"
             >
-              Cart
+              Cart - {cartItems.length}
             </Link>
           </li>
           <li>
