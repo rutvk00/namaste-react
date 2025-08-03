@@ -1,6 +1,6 @@
-import React , {lazy , Suspense} from 'react';
+import React , {lazy , Suspense, useEffect} from 'react';
 import ReactDOM from 'react-dom/client'; 
-
+import { useState } from 'react';
 import Header from './components/Header';
 import Body from './components/Body';
 import About from './components/About';
@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Error from './components/Error';
 import Cart from './components/Cart';
 import RestaurantMenu from './components/RestaurantMenu';
+import UserContex from './utils/UserContex';
 // import Grocery from './components/Grocery';
 
 // Chunking
@@ -16,17 +17,29 @@ import RestaurantMenu from './components/RestaurantMenu';
 // On Demand Loading
 // Dynamic Bundling
 // Dynamic import 
-
 const Grocery = lazy(() => import("./components/Grocery"));
 
 import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 
 
 const AppLayout = () => {
-    return <div className="app">
-        <Header />
-        <Outlet />
-    </div>
+    const [userName , setUserName] = useState("");
+
+    useEffect(() => {
+        // Make API Call for username and password
+        const data = {
+            name : "Rutvik"
+        }
+        setUserName(data.name)
+    },[]);
+    return (
+        <UserContex.Provider value ={{loggedInUser : userName , setUserName}}>
+            <div className="app">
+                <Header />
+                <Outlet />
+            </div>
+        </UserContex.Provider>
+    )
 };
 
 const appRouter = createBrowserRouter([
