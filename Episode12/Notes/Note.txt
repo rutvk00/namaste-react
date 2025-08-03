@@ -1,0 +1,7 @@
+Redux Tool Kit :
+
+For Writting Data into SLICE of REDUX Store :
+- Click on button => Dispatch an ACTION => Call REDUCER Function => Which update SLICE of REDUX STORE.
+
+For Reading Data From SLICE of REDUX Store:
+- Using SELECTOR = > Component read Data from slice of redux store (Componenet subscribing to the store)

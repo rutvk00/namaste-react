@@ -9,6 +9,8 @@ import Error from './components/Error';
 import Cart from './components/Cart';
 import RestaurantMenu from './components/RestaurantMenu';
 import UserContex from './utils/UserContex';
+
+import { Provider } from "react-redux";
 // import Grocery from './components/Grocery';
 
 // Chunking
@@ -20,11 +22,12 @@ import UserContex from './utils/UserContex';
 const Grocery = lazy(() => import("./components/Grocery"));
 
 import {createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
+import appStore from './utils/appStore';
 
 
 const AppLayout = () => {
+    
     const [userName , setUserName] = useState("");
-
     useEffect(() => {
         // Make API Call for username and password
         const data = {
@@ -32,13 +35,18 @@ const AppLayout = () => {
         }
         setUserName(data.name)
     },[]);
+
+
     return (
-        <UserContex.Provider value ={{loggedInUser : userName , setUserName}}>
-            <div className="app">
-                <Header />
-                <Outlet />
-            </div>
-        </UserContex.Provider>
+        <Provider store = {appStore}>
+            <UserContex.Provider value ={{loggedInUser : userName , setUserName}}>
+                <div className="app">
+                    <Header />
+                    <Outlet />
+                </div>
+            </UserContex.Provider>
+        </Provider>
+        
     )
 };
 

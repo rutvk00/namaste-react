@@ -1,1 +1,0 @@
-- Higher Order Component :  It takes Component input and return Component as output.  
