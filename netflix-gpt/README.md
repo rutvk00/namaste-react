@@ -7,6 +7,16 @@
 - Sign Up form  
 - Form validations
 - useRef hook
+- Firebase setup
+- Deploying our app to production
+-  Create SignUp User Account
+
+
+# Deploy on Firebase :
+- Install Firebase CLI - `npm install -g firebase tools`
+- Firebase Login - `firebase login`
+- Initialize Firebase - `firebase init`then select Hosting
+- Deploy Command - `firebase deploy`
 
 # Features
 - Login/Sign Up
