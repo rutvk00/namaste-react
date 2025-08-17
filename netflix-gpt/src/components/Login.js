@@ -2,9 +2,11 @@ import React, { useState, useRef} from "react";
 import Header from "./Header";
 import { checkValidateData } from "../utils/validate";
 
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile  } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
+import {useDispatch} from 'react-redux';
+import { addUser } from '../utils/userSlice';
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -13,6 +15,7 @@ const Login = () => {
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
+  const dispatch = useDispatch();
 
   const handleButtonClick = () => {
     const message = isSignInForm ? checkValidateData(email.current.value , password.current.value) : checkValidateData(email.current.value , password.current.value, name.current.value);
@@ -25,8 +28,27 @@ const Login = () => {
       .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
-        console.log("User : ", user);
-        navigate("/browse");
+        updateProfile(user, {
+          displayName: name.current.value ,
+          photoURL: "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg"
+        }).then(async () => {
+          // Profile updated!
+          await user.reload();
+          const updatedUser = auth.currentUser;
+
+          dispatch(addUser({
+            uid: updatedUser.uid,
+            email: updatedUser.email,
+            displayName: updatedUser.displayName,
+            photoURL: updatedUser.photoURL   // ✅ Now this will not be null
+          }));
+          navigate("/browse");
+        }).catch((error) => {
+          // An error occurred
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode+ "-"+ errorMessage);
+        });
       })
       .catch((error) => {
         const errorCode = error.code;
