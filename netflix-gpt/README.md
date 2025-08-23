@@ -12,6 +12,9 @@
 -  Create SignUp User Account
 - Implement SignIn User API
 - Create Redux Store with userSlice
+- Update Profile
+- BugFix: Sign up user displayName and profile picture update
+- BugFix: If user is not logged in Redirect /browse to Login Page and vice-versa
 
 
 # Deploy on Firebase :
