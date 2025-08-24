@@ -15,6 +15,8 @@
 - Update Profile
 - BugFix: Sign up user displayName and profile picture update
 - BugFix: If user is not logged in Redirect /browse to Login Page and vice-versa
+- Unsubscribe to the onAuthStateChanged callback
+-  Add Constants file 
 
 
 # Deploy on Firebase :

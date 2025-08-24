@@ -4,6 +4,7 @@ import { onAuthStateChanged, signOut } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
+import { LOGO } from '../utils/constants';
 
 const Header = () => {
 
@@ -22,7 +23,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribe =  onAuthStateChanged(auth, (user) => {
       if (user) {
         // User is signed Up or signed In
         const {uid, email, displayName, photoURL} = user;
@@ -34,12 +35,14 @@ const Header = () => {
         navigate("/");
       }
     });
+    // Unsubscribe when component unmounts
+    return () => unsubscribe();
   }, []);
 
   return (
     <div className=" absolute w-screen px-20 py-6 bg-black bg-opacity-5  z-10 flex justify-between items-center">
       <img className="w-56" 
-      src='https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production_2025-07-24/consent/87b6a5c0-0104-4e96-a291-092c11350111/019808e2-d1e7-7c0f-ad43-c485b7d9a221/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png' alt='logo'>
+      src={LOGO} alt='logo'>
       </img>
       {user && <div className='flex p-2 gap-4'>
         <img
