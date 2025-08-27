@@ -17,6 +17,9 @@
 - BugFix: If user is not logged in Redirect /browse to Login Page and vice-versa
 - Unsubscribe to the onAuthStateChanged callback
 -  Add Constants file 
+- Register TMDB API & create an app and get access token
+- Get data from TMDB now playing list API
+- Custome Hook for nowPlayingMovies
 
 
 # Deploy on Firebase :
