@@ -9,17 +9,22 @@
 - useRef hook
 - Firebase setup
 - Deploying our app to production
--  Create SignUp User Account
+- Create SignUp User Account
 - Implement SignIn User API
 - Create Redux Store with userSlice
 - Update Profile
 - BugFix: Sign up user displayName and profile picture update
 - BugFix: If user is not logged in Redirect /browse to Login Page and vice-versa
 - Unsubscribe to the onAuthStateChanged callback
--  Add Constants file 
+- Add Constants file 
 - Register TMDB API & create an app and get access token
 - Get data from TMDB now playing list API
 - Custome Hook for nowPlayingMovies
+- Create movieSlice
+- Update Store with movies Data
+- Fetch Data for Trailer Video
+- Update store for Trailer video data
+- Embedded the youtube video and make it autoplay and mute  
 
 
 # Deploy on Firebase :

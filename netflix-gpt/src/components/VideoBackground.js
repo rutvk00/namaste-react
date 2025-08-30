@@ -12,7 +12,6 @@ const VideoBackground = ({ movieId }) => {
         className="w-full h-full object-cover"
         src={`https://www.youtube.com/embed/${trailerVideo?.key}?autoplay=1&mute=1&controls=0&loop=1&playlist=${trailerVideo?.key}`}
         title="Movie Trailer"
-        frameBorder="0"
         allow="autoplay; encrypted-media; picture-in-picture"
       />
 
