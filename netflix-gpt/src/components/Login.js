@@ -18,7 +18,6 @@ const Login = () => {
 
   const handleButtonClick = () => {
     const message = isSignInForm ? checkValidateData(email.current.value , password.current.value) : checkValidateData(email.current.value , password.current.value, name.current.value);
-    console.log("message :", message);
     setErrorMessage(message);
     if(message) return;
 
